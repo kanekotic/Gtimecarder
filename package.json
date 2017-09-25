@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watch",
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "build:dev": "./node_modules/webpack/bin/webpack.js --watch"
+    "build": "webpack",
+    "build:dev": "webpack --watch --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
     "jest": "^21.1.0",
     "webpack": "^3.6.0"
   },

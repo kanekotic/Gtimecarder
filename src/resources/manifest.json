@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "GTimecarder",
+    "description": "chrome extension to fill timecard from google calendar",
+    "version": "0.1",
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage"
+    ],
+    "background": {
+      "scripts": [
+        "hot-reload.js"
+      ]
+    }
+  }
+  

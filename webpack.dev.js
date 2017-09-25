@@ -17,7 +17,7 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             {from:'src/html/**/*',to:'dist', flatten: true},
-            {from:'src/resources/**/*',to:'dist', flatten: true, ignore: ['hot-reload.js'] }
+            {from:'src/resources/**/*',to:'dist', flatten: true}
         ])
     ],
     output: {
