@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "chrome extension to fill timecard from google calendar",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "build:dev": "./node_modules/webpack/bin/webpack.js --watch"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "google",
     "calendar"
   ],
-  "author": "kanekotic",
+  "author": "kanekotic<alvarojosepl@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kanekotic/Gtimecarder/issues"
