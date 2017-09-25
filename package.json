@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:dev": "jest --watch",
+    "test:dev": "jest --watchAll",
+    "test:cov": "jest --coverage",
     "build": "webpack",
     "build:dev": "webpack --watch --config webpack.dev.js"
   },
@@ -36,5 +37,12 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*-test.js"
+    ],
+    "testEnvironment": "node",
+    "automock": false
   }
 }
