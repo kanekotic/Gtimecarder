@@ -13,12 +13,60 @@ module.exports = {
                 }
             },
             { 
-                test: /\.css$/, 
-                loader: "style-loader!css-loader" 
+              test: /\.css$/, 
+              use: [
+                { loader: "style-loader" },
+                { loader: "css-loader" }
+              ]
+            },
+            { 
+              test: /\.png$/, 
+              loader: "url-loader",
+              options: {
+                limit: 100000,
+                name: "dist/[name].[ext]"
+              }
+            },
+            { 
+              test: /\.jpg$/, 
+              loader: "file-loader",
+              options: {
+                name: "dist/[name].[ext]"
+              } 
             },
             {
               test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, 
-              loader: 'url?limit=10000&mimetype=application/font-woff'
+              loader: "url-loader",
+              options: {
+                limit: 100000,
+                mimetype: "application/font-woff",
+                name: "dist/[name].[ext]"
+              }
+            },
+            {
+              test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, 
+              loader: "url-loader",
+              options: {
+                limit: 100000,
+                mimetype: "application/octet-stream",
+                name: "dist/[name].[ext]"
+              }
+            },
+            {
+              test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
+              loader: 'file-loader',
+              options: {
+                name: 'dist/[name].[ext]'
+              }
+            },
+            {
+              test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
+              loader: "url-loader",
+              options: {
+                limit: 100000,
+                mimetype: "application/svg+xml",
+                name: "dist/[name].[ext]"
+              }
             }
         ]
     },
