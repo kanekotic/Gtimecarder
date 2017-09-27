@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { Button } from 'react-bootstrap'
-import reducer from './reducers'
+import reducer from '../reducers'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 function configureStore(initialState){
