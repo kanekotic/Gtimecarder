@@ -1,3 +1,6 @@
 import { combineReducers } from 'redux'
+import { createReducer } from 'redux-create-reducer'
 
-export default combineReducers({});
+const fakeReducer = createReducer(false , {})
+
+export default combineReducers({fakeReducer});

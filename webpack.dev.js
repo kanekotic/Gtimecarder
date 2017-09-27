@@ -72,7 +72,6 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            {from:'src/html/**/*',to:'dist', flatten: true},
             {from:'src/resources/**/*',to:'dist', flatten: true}
         ])
     ],
