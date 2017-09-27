@@ -1,12 +1,12 @@
 sudo: true
 language: node_js
 node_js:
-- '8'
+  '8'
 addons:
   chrome: stable
 script:
-- yarn test:cov
-- google-chrome --pack-extension=./dist || true
+  yarn test:cov
+  google-chrome --pack-extension=./dist || true
 #deploy:
 #  skip_cleanup: true
 #  provider: releases
